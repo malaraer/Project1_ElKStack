@@ -59,32 +59,32 @@ Load balancing ensures that the application will be highly responsive and availa
   - _Implementing log monitoring._
   - _Implementing two-factor ahuthentication for SSH login to the jump box._
 
-Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the _____ and system _____.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the file system and system metrics.
+- _Filebeat watch for/collect log files from very specific files such as Mircosoft Azure tools, Nginx web server, Apache or MySQL databases._
+- _Metricbeat record metrics and statistics for a system or services such as CPU  or memory usages, NGINX..._
 
-The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+The configuration details of each machine may be found below:
 
-| Name     | Function | IP Address | Operating System |
-|----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.0.0.1   | Linux            |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
-| TODO     |          |            |                  |
+| Name       | Function   | IP Address | Operating System |
+|------------|------------|------------|------------------|
+| Jump Box   | Gateway    | 10.0.0.1   | Linux            |
+| Web-1      | Web server | 10.0.0.9   | Linux            |
+| Web-2      | Web server | 10.0.0.7   | Linux            |
+| ELK_server | ELK server | 10.1.0.4   | Linux            |
+| Red_Team_LB  | Web server | 10.0.0.7   | Linux            |
+| ELK_server | ELK server | 10.1.0.4   | Linux            |
 
 ### Access Policies
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Elk server machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- _76.30.108.116_
 
 Machines within the network can only be accessed by _____.
 - _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
-
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
 | Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
