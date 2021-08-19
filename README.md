@@ -71,8 +71,8 @@ The configuration details of each machine may be found below:
 | Web-1      | Web server | 10.0.0.9   | Linux            |
 | Web-2      | Web server | 10.0.0.7   | Linux            |
 | ELK_server | ELK server | 10.1.0.4   | Linux            |
-| Red_Team_LB  | Web server | 10.0.0.7   | Linux            |
-| ELK_server | ELK server | 10.1.0.4   | Linux            |
+| Red_Team_LB| load balancer | 40.7.31.53| Linux          |
+| Client     | Workstation| 76.30.108.116| Windows        |
 
 ### Access Policies
 
@@ -81,14 +81,26 @@ The machines on the internal network are not exposed to the public Internet.
 Only the Elk server machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - _76.30.108.116_
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by other internal VM.
+- _Web-1 and Web-2 to access your ELK VM?_
+- _ What was its IP address?_
 
 A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
+| Jump Box | Yes                 | 76.30.108.116        |
+| Web-1    | No                  | 10.0.0.8             |
+| Web-2    | No                  | 10.0.0.8             |
+| load balancer | Yes            | 76.30.108.116        |
+| ELK server | Yes               | 76.30.108.116:5601   |
+
+### Elk Configuration
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
+- _TODO: What is the main advantage of automating configuration with Ansible?_
+
+The playbook implements the following tasks:
+    | No                  | 10.0.0.8             |
 |          |                     |                      |
 
 ### Elk Configuration
