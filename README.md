@@ -129,18 +129,30 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the playbook file "filebeat-playbook.ym" to the relevant location in the project. In this case the file was copied to the "roles" directory listed in /etc/ansible/roles/.
 - Update the configuraiton file "filebeat-config.yml" to include:
--   username & password
--   The host IP address: _10.1.0.4:9200_
--   Kibana end point configuration host IP: _10.1.0.4:5601_
--   To specify which machine to install the ELK server on versus the Filebeat we need to identify this in Playbook yaml file under hosts (see code 
+  - username & password
+  - The host IP address: _10.1.0.4:9200_
+  - Kibana end point configuration host IP: _10.1.0.4:5601_
+ - To specify which machine where ELK server vs Filebeat are installed, this is identified in Playbook yaml file under hosts (hosts were identified as "webservers" for filebeat, but "elk" for ELK server as shown below).
+- Run the playbook, and navigate to //http://40.77.108.39:5601/app/kibana#/home
+```
+# location where to install filebeat
+---
+- name: installing and launching filebeat
+  hosts: webservers
+  become: yes
+  tasks:
+...
+```
 
--   
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
-
-
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
+```
+# location where to install ELK server
+---
+- name: Configure Elk VM with Docker
+  hosts: elk
+  remote_user: azadmin
+  become: true
+  tasks:
+  ...
+  ```
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
