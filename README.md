@@ -156,6 +156,8 @@ SSH into the control node and follow the steps below:
   - Run the playbook, and navigate to //http://40.77.108.39:5601/app/kibana#/home
   - Navigate to the filebeat installation page on the ELK server GUI
   - Scroll to the bottom of the page and click Verify incoming data and you should see the following:
+
 ![](Images/ELK server Filebeat syslog dashboard.PNG)
+
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
