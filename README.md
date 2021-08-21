@@ -132,8 +132,7 @@ SSH into the control node and follow the steps below:
   - username & password
   - The host IP address: _10.1.0.4:9200_
   - Kibana end point configuration host IP: _10.1.0.4:5601_
- - To specify which machine where ELK server vs Filebeat are installed, this is identified in Playbook yaml file under hosts (hosts were identified as "webservers" for filebeat, but "elk" for ELK server as shown below).
-- Run the playbook, and navigate to //http://40.77.108.39:5601/app/kibana#/home
+ - To specify where ELK server vs. Filebeat are installed, this is identified in Playbook yaml file (hosts were identified as "webservers" for filebeat, but "elk" for ELK server as shown below).
 ```
 # location where to install filebeat
 ---
@@ -154,5 +153,9 @@ SSH into the control node and follow the steps below:
   tasks:
   ...
   ```
+  - Run the playbook, and navigate to //http://40.77.108.39:5601/app/kibana#/home
+  - Navigate to the filebeat installation page on the ELK server GUI
+  - Scroll to the bottom of the page and click Verify incoming data and you should see the following:
+  - 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
