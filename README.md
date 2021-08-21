@@ -174,4 +174,4 @@ _The specific commands the user will need to run to download the playbook, updat
 - Next you will need to run the playbook "ansible-playbook filebeat_playbook.yml"
 - Now you can check the results on Kibana GUI to verify changes took place. Below is a screen shot of the metricbeat that was completed in addition fo the filebeat with very similar steps were followed:
 
-
+![][(ELK_server_Metricbeat.png)
