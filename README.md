@@ -159,5 +159,19 @@ SSH into the control node and follow the steps below:
 
 ![](Images/ELK_server_Filebeat.png)
 
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+_The specific commands the user will need to run to download the playbook, update the files, etc... are_
+- First download the filebeat configuration template by running the following curl "curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c9
+3/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >/etc/ansible/filebeat‐config.yml"
+- Next the configuration file will need to be updated to include: username and password, ELK server IP address on lines 1106, and 1806.
+- Then update the fileat playbook yml file with the relevant commands i.e.:
+  - Install the filebeat deb "curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.1-amd64.deb"
+  - Install the .deb package "dpkg ‐i filebeat‐7.4.0‐amd64.deb"
+  - drop in filebeat.yml "dest: /etc/filebeat/filebeat.yml"
+  - Enable and configure system module "filebeat modules enable system"
+  - setup filebeat "filebeat setup"
+  - start filebeat "service filebeat start"
+  - ...
+- Next you will need to run the playbook "ansible-playbook filebeat_playbook.yml"
+- Now you can check the results on Kibana GUI to verify changes took place. Below is a screen shot of the metricbeat that was completed in addition fo the filebeat with very similar steps were followed:
+
 
