@@ -77,7 +77,7 @@ The configuration details of each machine may be found below:
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the Elk server machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+Only the Elk server and Jump Box machines can accept connections from the Internet. Access to these machine is only allowed from the following IP addresses:
 - _76.30.108.116_
 
 Machines within the network can only be accessed by other internal machines.
@@ -94,7 +94,7 @@ A summary of the access policies in place can be found in the table below.
 | Web-1    | No                  | 10.0.0.8             |
 | Web-2    | No                  | 10.0.0.8             |
 | load balancer | Yes            | 76.30.108.116        |
-| ELK server | Yes               | 76.30.108.116:5601   |                    |
+| ELK server | Yes               | 76.30.108.116:5601   |                    
 
 ### Elk Configuration
 
