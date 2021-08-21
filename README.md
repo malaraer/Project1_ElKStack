@@ -157,7 +157,7 @@ SSH into the control node and follow the steps below:
   - Navigate to the filebeat installation page on the ELK server GUI
   - Scroll to the bottom of the page and click Verify incoming data and you should see the following:
 
-![](Images/ELK server Filebeat syslog dashboard.PNG)
+![](Images/ELK_server_Filebeat.png)
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
 
