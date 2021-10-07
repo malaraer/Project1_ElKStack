@@ -90,11 +90,11 @@ Machines within the network can only be accessed by other internal machines.
 A summary of the access policies in place can be found in the table below.
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 76.30.108.116        |
+| Jump Box | Yes                 | 192.168.1.100        |
 | Web-1    | No                  | 10.0.0.8             |
 | Web-2    | No                  | 10.0.0.8             |
-| load balancer | Yes            | 76.30.108.116        |
-| ELK server | Yes               | 76.30.108.116:5601   |                    
+| load balancer | Yes            | 192.168.1.100        |
+| ELK server | Yes               | 192.168.1.100:5601   |                    
 
 ### Elk Configuration
 
