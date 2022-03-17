@@ -78,7 +78,7 @@ The configuration details of each machine may be found below:
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the Elk server and Jump Box machines can accept connections from the Internet. Access to these machine is only allowed from the following IP addresses:
-- _76.30.108.116_
+- _192.168.1.100_
 
 Machines within the network can only be accessed by other internal machines.
 - _Web-1, Web-2 and jump box are allowed to access your ELK VM._
